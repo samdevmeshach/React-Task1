@@ -5,7 +5,7 @@ import Snackbar from "@material-ui/core/Snackbar";
 import '../assets/css/main.css'
 import logo from '../assets/images/logo1.png'
 
-const Login = () => {
+const ForgotPassword = () => {
 
     const [values,setValues] = useState({
         email:'',
@@ -100,17 +100,12 @@ const Login = () => {
                     </div>
                     <div className="col">
                         <form className="w-75 login">
-                            <h1 className="mb-4">Login</h1>
+                            <h1>Forgot Password</h1>
+                            <p>We will send a reset link to your Email ID to reset your password</p>
                             <div className="form-group">
-                                <input onChange={handleChange("email")} type="text" className="form-control form-control-lg" value={email} placeholder="User ID" />
+                                <input onChange={handleChange("email")} type="text" className="form-control" value={email} placeholder="Email ID" />
                             </div>
-                            <div className="from-group mt-3">
-                                <input type={showPassword ? "text" : "password"} onChange={handleChange("password")} placeholder="Password" className="form-control form-control-lg" value={password} />
-                            </div>
-                            <Link to="/forgotpassword">
-                                <p className="mt-3">Forgot Password</p>
-                            </Link>
-                            <button onClick={login} className="btn colo w-50">LOGIN</button>
+                            <button onClick={login} className="btn mt-3 colo">SUBMIT</button>
                         </form>  
                     </div>
                 </div>
@@ -126,5 +121,5 @@ const Login = () => {
         </div>
     )
 }
-export default Login
+export default ForgotPassword
 
