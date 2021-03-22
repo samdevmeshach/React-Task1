@@ -1,0 +1,57 @@
+nav .image img{
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+}
+nav{
+    display: flex;
+    align-content: center;
+    background: linear-gradient(to right, #36ccc0, #36b969);
+    align-items: center;
+    height: 91vh;
+    flex-direction: column;
+}
+nav .setting i{
+    color: white;
+    margin: 0px 10px;
+    padding: 10px;
+    background-color: rgba(192, 216, 192, 0.596);
+    border-radius: 50%;
+}
+nav .menu i{
+    color: rgba(255, 255, 255, 0.514);
+    font-size: 20px;
+    padding: 10px;
+}.menu h5{
+    color: rgba(255, 255, 255, 0.418);
+}
+nav select{
+    border: none;
+    background-color: transparent;
+    color: white;
+    font-size: 20px;
+}
+nav li{
+    list-style-type: none;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.back{
+    background-color: rgba(39, 163, 45, 0.822);
+    width:fit-content;
+    color: white;
+    padding: 8px 12px;
+    border-radius: 50%;
+    border: none;
+    margin-right: 30px;
+    margin-left: 20px;
+
+}
+label{
+    color: rgba(65, 54, 54, 0.418);
+    font-weight: 500;
+}
+label span{
+    color: rgb(32, 194, 32);
+}
