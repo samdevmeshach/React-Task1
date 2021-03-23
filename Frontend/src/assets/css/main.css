@@ -161,6 +161,9 @@ h6 p{
     border-bottom: 2px solid green;
     width:50px;
 }
+h6{
+    color: green;
+}
 .box select{
     border: none;
     border-bottom: 1px solid rgba(161, 148, 148, 0.575);
@@ -170,21 +173,31 @@ h6 p{
 .form{
     margin-bottom: 30%;
 }
-@media (max-width:710px){
+@media (max-width:680px){
     .list1{display: none;}
     .sidebar{
         display: none;
     }
-    .list3{
-        grid-column:1/span 12;
-        grid-row: 1/span 2;
+    .list3,.list4,.list5{
+        margin-left: -20%;
     }
-    .list4{
-        grid-column:1/span 12;
-        grid-row: 3;
+}
+@media (max-width:500px){
+    .menubar a{
+        font-size: 12px;
     }
-    .list5{
-        grid-column:1/span 12;
-        grid-row: 4/span 10;
+}
+@media (max-width:390px){
+    .menubar a{
+        font-size: 10px;
     }
+    .backcontent{
+        font-size: 12px;
+        margin-left: -5%;
+    }
+}
+input[type=file]{
+    content: 'google';
+    text-decoration: none;
+    border: none;
 }
