@@ -6,15 +6,15 @@ const Backbtn = () =>  {
     const hidenav = (event) => {
         event.preventDefault();
         if(show == true){
-            document.getElementById("head").style.display="none"
-            document.getElementById("side").style.display="none"
+            document.getElementById("head").style.cssText="display:none"
+            document.getElementById("side").style.cssText="display:none"
             document.getElementById("row1").style.marginLeft="-20%"
             document.getElementById("row2").style.marginLeft="-20%"
             document.getElementById("row3").style.marginLeft="-20%"
         }else{
             
-            document.getElementById("head").style.cssText="display:block;position:absolute;"
-            document.getElementById("side").style.cssText="display:block;position:absolute;top:10%;width:16.5%"
+            document.getElementById("head").style.cssText="display:block;"
+            document.getElementById("side").style.cssText="display:block;"
 
             document.getElementById("row1").style.marginLeft="0%"
             document.getElementById("row2").style.marginLeft="0%"

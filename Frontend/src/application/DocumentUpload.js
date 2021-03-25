@@ -11,6 +11,7 @@ function DocumentUpload() {
                     </h6>
                     <div className="upload">
                         <input type="file" />
+                        <label>upload</label>
                     </div>
                     <div className="upload">
                         <i class="fas fa-plus"></i>

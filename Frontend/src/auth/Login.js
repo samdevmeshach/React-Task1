@@ -3,6 +3,7 @@ import {Link } from 'react-router-dom'
 import Alert from "@material-ui/lab/Alert";
 import Snackbar from "@material-ui/core/Snackbar";
 import '../assets/css/main.css'
+import {validateEmail,validatePassword} from './validate'
 import logo from '../assets/images/logo1.png'
 
 const Login = () => {
@@ -22,10 +23,7 @@ const Login = () => {
 
     const handleChange = name => event => {
         setValues({...values,[name]:event.target.value})
-    }
-
-    const toogle = () => {
-        setValues({...values,showPassword:!showPassword})
+        console.log(values)
     }
 
     const handleCloseError = (event, reason) => {
@@ -59,29 +57,11 @@ const Login = () => {
     const login = (event) => {
         event.preventDefault();
         setValues({...values,error:false,loading:true})
-        if (typeof email !== "undefined") 
-        {
-
-            var pattern = new RegExp(/^(("[\w-\s]+")|([\w-]+(?:\.[\w-]+)*)|("[\w-\s]+")([\w-]+(?:\.[\w-]+)*))(@((?:[\w-]+\.)*\w[\w-]{0,66})\.([a-z]{2,6}(?:\.[a-z]{2})?)$)|(@\[?((25[0-5]\.|2[0-4][0-9]\.|1[0-9]{2}\.|[0-9]{1,2}\.))((25[0-5]|2[0-4][0-9]|1[0-9]{2}|[0-9]{1,2})\.){2}(25[0-5]|2[0-4][0-9]|1[0-9]{2}|[0-9]{1,2})\]?$)/i);
-            if (pattern.test(email)) 
-            {
-                if(typeof password !== undefined)
-                {
-                    var pat = new RegExp(/^(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,32}$/);
-                    if(!pat.test(password))
-                    {
-                        setValues({...values,error:true,errortxt:"Invalid Password"})
-                    }
-                    else
-                    {
-                        setValues({...values,success:true})
-                    }
-                }
-            }
-            else
-            {
-                setValues({...values,error:true,errortxt:"Invalid Email"})
-            }
+        if(validateEmail(email) && validatePassword(password)){
+            setValues({...values,success:true})
+        }
+        else{
+            setValues({...values,error:true,errortxt:"Invalid Details"})
         }
     }
     const loginForm = () => (
