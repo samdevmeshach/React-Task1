@@ -42,18 +42,18 @@
 }
 .sidebar{
     grid-row: 2 / span 12;
-    grid-column: 1 /span 2;
+    grid-column: 1 /span 1;
 }
 .list3{
-    grid-column:3/span 11;
+    grid-column:2/span 11;
     grid-row: 1/span 2;
 }
 .list4{
-    grid-column:3/span 11;
+    grid-column:2/span 11;
     grid-row: 3;
 }
 .list5{
-    grid-column:3/span 11;
+    grid-column:2/span 11;
     grid-row: 4/span 10;
 }
 a{
@@ -131,10 +131,13 @@ a:hover{
     padding: 10px;
     color: black;
 }
+.list1{
+    position: fixed;
+}
 .list1 label {
-    margin-left: 10px;
+    margin-left: 3px;
     color: rgb(30, 184, 30);
-    font-size: 14px;
+    font-size: 10px;
     font-weight: bold;
 }
 @media (max-width:1030px){
@@ -179,7 +182,7 @@ h6{
         display: none;
     }
     .list3,.list4,.list5{
-        margin-left: -20%;
+        margin-left: -10%;
     }
 }
 @media (max-width:500px){
@@ -196,8 +199,29 @@ h6{
         margin-left: -5%;
     }
 }
-input[type=file]{
-    content: 'google';
-    text-decoration: none;
-    border: none;
+[type="file"] {
+    height: 0;
+    overflow: hidden;
+    width: 0;
+}
+.upload{
+    display: flex;
+    /* margin: 30px; */
+}
+.cont{
+    margin-left: 20px;
+    padding: 25px 35px;
+    border: 1px solid rgb(197, 197, 197);
+    border-style: dashed;
+    border-radius: 10px;
+    cursor: pointer;
+}
+.cont label{
+    text-align: center;
+    cursor: pointer;
+    font-size: 30px;
+}
+.cont .lab{
+    font-size: 14px;
+    cursor: pointer;
 }

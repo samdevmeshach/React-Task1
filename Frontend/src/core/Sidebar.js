@@ -20,15 +20,15 @@ const Sidebar = () => {
                 <div className="menu mt-4">
                     <li className="mt-3">
                         <i class="fas fa-file-alt"></i>
-                        <h5>Application</h5>
+                        <h6>Application</h6>
                     </li>
                     <li className="mt-3">
                         <i class="fas fa-user-tie"></i>
-                        <h5>Co-Lender</h5>
+                        <h6>Co-Lender</h6>
                     </li>
                     <li className="mt-3">
                         <i class="fas fa-box-open"></i>
-                        <h5>Product</h5>
+                        <h6>Product</h6>
                     </li>
                 </div>
             </nav>

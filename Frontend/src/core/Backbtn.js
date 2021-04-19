@@ -8,18 +8,16 @@ const Backbtn = () =>  {
         if(show == true){
             document.getElementById("head").style.cssText="display:none"
             document.getElementById("side").style.cssText="display:none"
-            document.getElementById("row1").style.marginLeft="-20%"
-            document.getElementById("row2").style.marginLeft="-20%"
-            document.getElementById("row3").style.marginLeft="-20%"
+            document.getElementById("row1").style.marginLeft="-9%"
+            document.getElementById("row2").style.marginLeft="-9%"
+            document.getElementById("row3").style.marginLeft="-9%"
         }else{
             
             document.getElementById("head").style.cssText="display:block;"
             document.getElementById("side").style.cssText="display:block;"
-
             document.getElementById("row1").style.marginLeft="0%"
             document.getElementById("row2").style.marginLeft="0%"
             document.getElementById("row3").style.marginLeft="0%"
-            
         }
         setShow(!show)
     }
